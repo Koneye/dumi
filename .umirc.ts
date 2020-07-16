@@ -11,7 +11,8 @@ export default defineConfig({
   resolve: {
     previewLangs: ['js', 'jsx', 'ts', 'tsx'],
   },
-  publicPath: './',
+  publicPath: '/',
+  base: '/dumi/',
   extraBabelPlugins: [
     ['import', { libraryName: 'antd', libraryDirectory: 'es', style: true }],
   ],
@@ -20,11 +21,15 @@ export default defineConfig({
   // ],
   links: [
     {
-      href: '../common.css',
+      href: './common.css',
       rel: 'stylesheet',
     },
   ],
   alias: {
     utils: path.resolve(__dirname, 'src/utils'),
   },
+  externals: {
+    moment: 'moment',
+  },
+  scripts: ['https://cdn.bootcdn.net/ajax/libs/moment.js/2.27.0/moment.min.js'],
 });
