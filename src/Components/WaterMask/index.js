@@ -2,12 +2,16 @@
  * @Author: zhuxingmin
  * @Date: 2020-07-07 13:47:34
  * @Last Modified by: zhuxingmin
- * @Last Modified time: 2020-07-09 09:54:39
+ * @Last Modified time: 2020-07-16 09:49:44
  * @Description: 水印
  */
 import React, { Component } from 'react';
 import t from 'prop-types';
-import { getStrLength, mapMarkToWaterMask } from 'utils/utils';
+
+const getStrLength = (str = '') => {
+  // 一个中文字符换算成两个英文字母
+  return str.replace(/[\u0391-\uFFE5]/g, 'aa').length / 2;
+};
 
 class WaterMask extends Component {
   constructor(props) {
@@ -59,7 +63,7 @@ class WaterMask extends Component {
     let target = document.querySelector(body);
     target.style.position = 'relative';
 
-    let prefix = mapMarkToWaterMask();
+    let prefix = ''; // mapMarkToWaterMask();
     _str = `${prefix}${str}`;
     // 宽高分别设置最小值 保证水印间隔  高度在字数较多时 固定加200 以保证垂直方向的间隔
     let len = getStrLength(_str);
