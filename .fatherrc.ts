@@ -4,7 +4,4 @@ export default {
   extraBabelPlugins: [
     ['import', { libraryName: 'antd', libraryDirectory: 'es', style: true }],
   ],
-  doc: {
-    base: '/dumi',
-  },
 };
