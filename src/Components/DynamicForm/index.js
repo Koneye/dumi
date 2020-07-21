@@ -2,14 +2,14 @@
  * @Author: zhuxingmin
  * @Date: 2020-05-20 14:01:52
  * @Last Modified by: zhuxingmin
- * @Last Modified time: 2020-07-16 09:48:24
+ * @Last Modified time: 2020-07-17 16:09:26
  * @description: 主要用於列表頭部的條件查詢
  */
 import React, { PureComponent } from 'react';
 import t from 'prop-types';
 import { Form, Row, Col, Button, Input, Select, DatePicker } from 'antd';
 import moment from 'moment';
-import './index.less';
+import styles from './index.less';
 
 const debounce = (fn, wait = 1000) => {
   let timeout = null;
@@ -254,7 +254,7 @@ class Index extends PureComponent {
   render() {
     const { open } = this.state;
     return (
-      <Form onSubmit={this.onSubmit} className="dynamicForm">
+      <Form onSubmit={this.onSubmit} className={styles.dynamicForm}>
         <Row className="dynamicForm_row">{this.createFormItem()}</Row>
         <Row className="dynamicForm_row">
           <Col span={24} style={{ textAlign: 'right' }}>
@@ -272,6 +272,7 @@ class Index extends PureComponent {
               type="default"
               style={{ marginLeft: 8 }}
               onClick={this.toggle}
+              className={styles.test}
             >
               {open ? '收起' : '展开'}
             </Button>
