@@ -1,6 +1,6 @@
 import { defineConfig } from 'dumi';
 
-const Dev = process.env.NODE_ENV === 'development';
+// const Dev = process.env.NODE_ENV === 'development';
 
 // more config: https://d.umijs.org/config
 export default defineConfig({
@@ -14,19 +14,24 @@ export default defineConfig({
   resolve: {
     previewLangs: ['js', 'jsx', 'ts', 'tsx'],
   },
-  publicPath: Dev ? '/' : './',
+  // publicPath: Dev ? '/' : './',
   ignoreMomentLocale: true,
-  base: Dev ? '/' : '/dumi/',
+  // base: Dev ? '/' : '/dumi/',
   dynamicImport: {},
   extraBabelPlugins: [
     ['import', { libraryName: 'antd', libraryDirectory: 'es', style: true }],
   ],
-  links: [
-    {
-      href: Dev ? '../common.css' : './common.css',
-      rel: 'stylesheet',
-    },
+  styles: [
+    `th[align='center'] {
+      text-align: center;
+    }`,
   ],
+  // links: [
+  //   {
+  //     href: Dev ? '../common.css' : './common.css',
+  //     rel: 'stylesheet',
+  //   },
+  // ],
   externals: {
     moment: 'moment',
   },

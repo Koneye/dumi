@@ -1,6 +1,6 @@
 ## QueryFormWrapper
 
-### 基于 canvas 实现的签名组件
+### 表格头部筛选表单
 
 ```jsx
 /**
