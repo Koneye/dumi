@@ -10,14 +10,14 @@ export default defineConfig({
   title: '车300组件文档',
   description: '车300-前端',
   outputPath: 'docs-dist',
-  // exportStatic: {},
+  exportStatic: {},
   resolve: {
     previewLangs: ['js', 'jsx', 'ts', 'tsx'],
   },
   publicPath: Dev ? '/' : './',
   ignoreMomentLocale: true,
   base: Dev ? '/' : '/dumi/',
-  // dynamicImport: {},
+  dynamicImport: {},
   extraBabelPlugins: [
     ['import', { libraryName: 'antd', libraryDirectory: 'es', style: true }],
   ],
