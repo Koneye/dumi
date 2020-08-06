@@ -1,6 +1,6 @@
 import { defineConfig } from 'dumi';
 
-// const Dev = process.env.NODE_ENV === 'development';
+const Dev = process.env.NODE_ENV === 'development';
 
 // more config: https://d.umijs.org/config
 export default defineConfig({
@@ -14,7 +14,7 @@ export default defineConfig({
   resolve: {
     previewLangs: ['js', 'jsx', 'ts', 'tsx'],
   },
-  // publicPath: Dev ? '/' : './',
+  publicPath: Dev ? '/' : './',
   ignoreMomentLocale: true,
   // base: Dev ? '/' : '/dumi/',
   dynamicImport: {},
