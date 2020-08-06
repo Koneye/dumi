@@ -14,10 +14,10 @@ export default defineConfig({
   resolve: {
     previewLangs: ['js', 'jsx', 'ts', 'tsx'],
   },
-  publicPath: Dev ? '/' : './',
+  // publicPath: Dev ? '/' : './',
   ignoreMomentLocale: true,
-  base: Dev ? '/' : '/dumi/',
-  dynamicImport: {},
+  // base: Dev ? '/' : '/dumi/',
+  // dynamicImport: {},
   extraBabelPlugins: [
     ['import', { libraryName: 'antd', libraryDirectory: 'es', style: true }],
   ],
