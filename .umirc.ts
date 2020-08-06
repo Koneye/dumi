@@ -10,7 +10,7 @@ export default defineConfig({
   title: '车300组件文档',
   description: '车300-前端',
   outputPath: 'docs-dist',
-  exportStatic: {},
+  // exportStatic: {},
   resolve: {
     previewLangs: ['js', 'jsx', 'ts', 'tsx'],
   },
