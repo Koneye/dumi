@@ -10,16 +10,14 @@ export default defineConfig({
     title: '车300组件文档',
     description: '车300-前端',
     outputPath: 'docs-dist',
-    // exportStatic: {
-    //   htmlSuffix: true
-    // },
+    exportStatic: {},
     resolve: {
         previewLangs: ['js', 'jsx', 'ts', 'tsx'],
     },
-    publicPath: Dev ? '/' : './',
+    publicPath: Dev ? '/' : '/c3-react-docs/',
     ignoreMomentLocale: true,
-    base: Dev ? '/' : '/dumi/',
-    // dynamicImport: {},
+    base: Dev ? '/' : '/c3-react-docs/',
+    dynamicImport: {},
     extraBabelPlugins: [
         [
             'import',
@@ -31,12 +29,12 @@ export default defineConfig({
       text-align: center;
     }`,
     ],
-    // links: [
-    //   {
-    //     href: Dev ? '../common.css' : './common.css',
-    //     rel: 'stylesheet',
-    //   },
-    // ],
+    links: [
+        {
+            href: Dev ? '../common.css' : '/c3-react-docs/common.css',
+            rel: 'stylesheet',
+        },
+    ],
     externals: {
         moment: 'moment',
         React: 'react',
