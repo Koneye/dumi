@@ -1,7 +1,7 @@
 {
   "private": false,
-  "name": "dumi-lib",
-  "version": "2.1.0",
+  "name": "@c300/react-ui",
+  "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
