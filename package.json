@@ -1,6 +1,8 @@
 {
   "private": false,
   "name": "@c300/react-ui",
+  "author": "zhuxingmin",
+  "description": "基于dumi搭建，对antd进行再封装的组件库",
   "version": "1.0.2",
   "scripts": {
     "start": "dumi dev",
