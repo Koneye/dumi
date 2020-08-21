@@ -3,6 +3,12 @@
   "name": "@c300/react-ui",
   "author": "zhuxingmin",
   "description": "基于dumi搭建，对antd进行再封装的组件库",
+  "repository": "http://182.254.153.226/fe/fe-pub/c3-ui-react",
+  "bugs": "http://182.254.153.226/fe/fe-pub/c3-ui-react/issues",
+  "homepage": "http://fezz.ceshi.che300.com/c3-react-docs/",
+  "publishConfig": {
+    "registry": "https://fe.che300.com/npm"
+  },
   "version": "1.0.3",
   "scripts": {
     "start": "dumi dev",
