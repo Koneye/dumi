@@ -8,13 +8,13 @@
  *  desc: 可编辑的表单域
  */
 import react, { useState } from 'react';
-import { EditableItem } from 'dumi-lib';
+import { EditableItem } from '@c300/react-ui';
 
 export default () => {
-  const onChange = value => {
-    console.log(value);
-  };
-  return <EditableItem value={123} onChange={onChange} />;
+    const onChange = value => {
+        console.log(value);
+    };
+    return <EditableItem value={123} onChange={onChange} />;
 };
 ```
 

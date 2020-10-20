@@ -8,48 +8,48 @@
  *  desc: 带选框的表格
  */
 import react, { useState } from 'react';
-import { SelectTable } from 'dumi-lib';
+import { SelectTable } from '@c300/react-ui';
 
 const getList = ({ current, pageSize }) =>
-  [...new Array(pageSize)].map((item, index) => ({
-    id: `第${current}页___id${index}`,
-    value: index,
-  }));
+    [...new Array(pageSize)].map((item, index) => ({
+        id: `第${current}页___id${index}`,
+        value: index,
+    }));
 const columns = [
-  {
-    title: '编号',
-    dataIndex: 'id',
-  },
-  {
-    title: '随机数',
-    dataIndex: 'value',
-  },
+    {
+        title: '编号',
+        dataIndex: 'id',
+    },
+    {
+        title: '随机数',
+        dataIndex: 'value',
+    },
 ];
 export default () => {
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
-  const [pagination, setPagination] = useState({ current: 1, pageSize: 10 });
-  const onSelectRow = (selectedRowKeys, selectedRows) => {
-    console.log(selectedRowKeys, selectedRows);
-    setSelectedRowKeys(selectedRowKeys);
-  };
-  const onChange = pagination => setPagination(pagination);
-  const list = getList(pagination);
-  return (
-    <SelectTable
-      data={{
-        list: list,
-        total: 500,
-        pageNo: pagination.current,
-        pageSize: pagination.pageSize,
-      }}
-      rowKey={'id'}
-      columns={columns}
-      selectedRowKeys={selectedRowKeys}
-      // getCheckboxProps={}
-      onSelectRow={onSelectRow}
-      onChange={onChange}
-    />
-  );
+    const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+    const [pagination, setPagination] = useState({ current: 1, pageSize: 10 });
+    const onSelectRow = (selectedRowKeys, selectedRows) => {
+        console.log(selectedRowKeys, selectedRows);
+        setSelectedRowKeys(selectedRowKeys);
+    };
+    const onChange = pagination => setPagination(pagination);
+    const list = getList(pagination);
+    return (
+        <SelectTable
+            data={{
+                list: list,
+                total: 500,
+                pageNo: pagination.current,
+                pageSize: pagination.pageSize,
+            }}
+            rowKey={'id'}
+            columns={columns}
+            selectedRowKeys={selectedRowKeys}
+            // getCheckboxProps={}
+            onSelectRow={onSelectRow}
+            onChange={onChange}
+        />
+    );
 };
 ```
 

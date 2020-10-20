@@ -8,25 +8,25 @@
  *  desc: 基于`Antd`的`Select`封装的带有通用逻辑的组件
  */
 import react, { useState } from 'react';
-import { AntdSelect } from 'dumi-lib';
+import { AntdSelect } from '@c300/react-ui';
 
 const data = [...new Array(10)].map((item, index) => ({
-  id: `id${index}`,
-  value: Math.random(),
+    id: `id${index}`,
+    value: Math.random(),
 }));
 
 export default () => {
-  const onChange = value => console.log(value);
-  return (
-    <AntdSelect
-      style={{ width: 200 }}
-      name="name"
-      data={data}
-      valueName="value"
-      labelName="id"
-      onChange={onChange}
-    />
-  );
+    const onChange = value => console.log(value);
+    return (
+        <AntdSelect
+            style={{ width: 200 }}
+            name="name"
+            data={data}
+            valueName="value"
+            labelName="id"
+            onChange={onChange}
+        />
+    );
 };
 ```
 

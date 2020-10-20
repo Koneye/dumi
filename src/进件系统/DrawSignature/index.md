@@ -8,15 +8,15 @@
  *  desc: 基于canvas实现的签名功能
  */
 import react, { useState } from 'react';
-import { DrawSignature } from 'dumi-lib';
+import { DrawSignature } from '@c300/react-ui';
 
 export default () => {
-  const [src, setSrc] = useState('');
-  return (
-    <>
-      <DrawSignature value={src} callback={src => setSrc(src)} />
-    </>
-  );
+    const [src, setSrc] = useState('');
+    return (
+        <>
+            <DrawSignature value={src} callback={src => setSrc(src)} />
+        </>
+    );
 };
 ```
 

@@ -8,17 +8,17 @@
  *  desc: 生成水印节点
  */
 import react, { useState } from 'react';
-import { WaterMask } from 'dumi-lib';
+import { WaterMask } from '@c300/react-ui';
 
 export default () => (
-  <div className="demo-wm" style={{ height: '500px' }}>
-    <WaterMask
-      body={'.demo-wm'}
-      str={'这是一个很长的示例水印'}
-      rotate={-60}
-      fontSize={30}
-    />
-  </div>
+    <div className="demo-wm" style={{ height: '500px' }}>
+        <WaterMask
+            body={'.demo-wm'}
+            str={'这是一个很长的示例水印'}
+            rotate={-60}
+            fontSize={30}
+        />
+    </div>
 );
 ```
 

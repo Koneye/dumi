@@ -7,3 +7,4 @@ export { default as AntdSelect } from './进件系统/AntdSelect';
 export { default as DrawSignature } from './进件系统/DrawSignature';
 export { default as QueryFormWrapper } from './进件系统/QueryFormWrapper';
 export { default as SelectTable } from './进件系统/SelectTable';
+export { default as BtnLink } from './进件系统/BtnLink';
